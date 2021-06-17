@@ -1,23 +1,24 @@
-print(2 * 3)
-print(type(2 * 3))
-print((3 * 3 + 8) / 3)
-print(type((3 * 3 + 8) / 3))
-print(8 // 3)
-print(type(8 // 3))
-print(8 % 3)
-print(type(8 % 3))
-print(5 ** 2)
-print(type(5 ** 2))
-print('Hello' + 'World')
-print(type('Hello' + 'World'))
-a = "Yesterday All my troubles seemed so far away"
-b = 'Now it looks as though here to stay'
-print(a[:10])
-print(a[2:12])
-print(a[-10:])
-print(a[::-1])
-print(a[::2])
-print(a[1::2])
-a = int(input("Введите первое число: "))
-c = int(input("Введите второе число: "))
-print(a + c)
+import math
+# дано число 123
+print((123 // 100) + (123 % 10) * 100 + ((123 // 10) % 10) * 10)
+
+# Дано вадратное уровнение ax^2 + bx + c = 0
+print("Введите коэффициенты для уравнения  ax^2 + bx + c = 0:")
+a = float(input("Введите переменную a = "))
+b = float(input("Введите переменную b = "))
+c = float(input("Введите переменную c = "))
+
+d = b ** 2 - 4 * a * c
+print("Дискриминант d =" + str(d))
+
+if d < 0:
+    x1 = complex((-b / (2 * a)), math.sqrt(-d) / (2 * a))
+    x2 = complex((-b / (2 * a)), -math.sqrt(-d) / (2 * a))
+    print("Дискрименант меньше 0 получаем комплексные корни x1 = ", x1, " и  x2 =", x2)
+elif d > 0:
+    x1 = (-b + math.sqrt(d)) / (2 * a)
+    x2 = (-b - math.sqrt(d)) / (2 * a)
+    print("Дискрименант больше 0 получаем 2 корня x1 = ", x1, "и x2 = ", x2)
+else:
+    x1 = (-b) / (2 * a) # В домашнем задании указана другая формула нахождения корня при d == 0
+    print("Дискрименант равен 0 получаем один корень x = ", x)
