@@ -10,7 +10,6 @@ c = float(input("Введите переменную c = "))
 
 d = b ** 2 - 4 * a * c
 print("Дискриминант d =" + str(d))
-
 if d < 0:
     x1 = complex((-b / (2 * a)), math.sqrt(-d) / (2 * a))
     x2 = complex((-b / (2 * a)), -math.sqrt(-d) / (2 * a))
