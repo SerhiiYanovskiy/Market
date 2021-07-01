@@ -1,13 +1,19 @@
-def foo(inputstring, inputbit):
-    if inputbit & 0b1:
-        inputstring = f"{'<b>'}{inputstring}{'</b>'}"
-    if inputbit & 0b10:
-        inputstring = f"{'<i>'}{inputstring}{'</i>'}"
-    if inputbit & 0b100:
-        inputstring = f"{'<u>'}{inputstring}{'</u>'}"
-    if inputbit & 0b1000:
-        inputstring = f"{'<s>'}{inputstring}{'</s>'}"
-    return inputstring
+from const import STORE
+from helpers import print_menu
 
 
-print(foo("test", 13))
+def start_store():
+    while True:
+        print(print_menu())
+
+        choice = int(input('Your choice'))
+        if choice == 0:
+            break
+        if choice == 1:
+            for item in STORE:
+                print(item)
+
+
+if __name__ == '__main__':
+    start_store()
+
