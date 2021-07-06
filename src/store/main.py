@@ -13,7 +13,7 @@ def start_store():
                 print(item)
         if choice == 2:
             N = float(input("Enter price"))
-            lis = [item for item in STORE if item[2] < N]
+            lis = [item for item in STORE if item.prise < N]
             print(lis)
 
 
