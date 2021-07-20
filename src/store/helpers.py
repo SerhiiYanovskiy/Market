@@ -3,7 +3,7 @@ def decor(func):
         print("================")
         func()
         print("+++++++++++++++++")
-    return(menu)
+    return menu
 
 
 def print_menu():
