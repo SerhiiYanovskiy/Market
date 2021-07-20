@@ -4,7 +4,7 @@ from helpers import print_menu
 
 def start_store():
     while True:
-        print(print_menu())
+        print_menu()
         choice = int(input('Your choice'))
         if choice == 0:
             break
