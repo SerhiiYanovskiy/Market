@@ -8,8 +8,6 @@ def start_store():
         choice = int(input('Your choice'))
         if choice == 0:
             break
-
-
         lis = []
         if choice == 1:
             for item in STORE:
@@ -22,7 +20,7 @@ def start_store():
 
         def choice_1(S):
             for item in S:
-               print(item)
+                print(item)
 
         choice_1(lis)
 
