@@ -10,19 +10,18 @@ def start_store():
             break
         lis = []
         if choice == 1:
-            for item in STORE:
-                lis.append(item)
+            lis.append(STORE)
         if choice == 2:
             N = float(input("Yore price"))
             lis1 = [item for item in STORE if item.prise < N]
-            for item in lis1:
-                lis.append(item)
+            lis.append(lis1)
 
-        def choice_1(S):
+        def print_product_list(S):
             for item in S:
-                print(item)
+                for i in item:
+                    print(i)
 
-        choice_1(lis)
+        print_product_list(lis)
 
 
 if __name__ == '__main__':
