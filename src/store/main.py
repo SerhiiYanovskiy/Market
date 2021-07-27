@@ -1,5 +1,6 @@
 from const import STORE
 from helpers import print_menu
+from helpers import print_product_list
 
 
 def start_store():
@@ -8,21 +9,12 @@ def start_store():
         choice = int(input('Your choice'))
         if choice == 0:
             break
-        lis = []
+
         if choice == 1:
-            for item in STORE:
-                lis.append(item)
+            print_product_list(STORE)
         if choice == 2:
             N = float(input("Yore price"))
-            lis1 = [item for item in STORE if item.prise < N]
-            for item in lis1:
-                lis.append(item)
-
-        def choice_1(S):
-            for item in S:
-                print(item)
-
-        choice_1(lis)
+            print_product_list([item for item in STORE if item.prise < N])
 
 
 if __name__ == '__main__':

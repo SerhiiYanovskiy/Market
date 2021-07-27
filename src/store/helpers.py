@@ -13,6 +13,14 @@ def print_menu():
     print('2 Show products no more expensive than N')
 
 
+def print_product_list(S):
+    for item in S:
+        print(item)
+
+
+
+
+
 
 
 
