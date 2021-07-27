@@ -15,8 +15,7 @@ def print_menu():
 
 def print_product_list(S):
     for item in S:
-        for i in item:
-            print(i)
+        print(item)
 
 
 

@@ -9,19 +9,12 @@ def start_store():
         choice = int(input('Your choice'))
         if choice == 0:
             break
-        lis = []
+
         if choice == 1:
-            lis.append(STORE)
-            print_product_list(lis)
+            print_product_list(STORE)
         if choice == 2:
             N = float(input("Yore price"))
-            lis1 = [item for item in STORE if item.prise < N]
-            lis.append(lis1)
-            print_product_list(lis)
-
-
-
-
+            print_product_list([item for item in STORE if item.prise < N])
 
 
 if __name__ == '__main__':
