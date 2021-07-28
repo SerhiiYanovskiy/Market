@@ -14,8 +14,8 @@ def print_menu():
 
 
 def print_product_list(S):
-    for item in S:
-        print(item)
+    for idx, item in enumerate(S):
+        print(f'{idx}) {item}')
 
 
 
