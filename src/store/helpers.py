@@ -7,17 +7,8 @@ def find_product_by_article(article):
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+def error_menu():
+    print("Article not found")
 
 
 
