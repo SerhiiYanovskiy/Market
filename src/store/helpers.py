@@ -1,9 +1,24 @@
 from const import STORE
 
 
-
 def find_product_by_article(article):
-    corent.product = [item for item in STORE if item.product.article == article][0]
+    corent_product = [item for item in STORE if item.article == article][0]
+    return corent_product
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 def receipt_menu():
