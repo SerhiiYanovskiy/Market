@@ -8,8 +8,14 @@ class Product:
         return f'article = {self._article} title = {self._title} prise = {self._prise}'
 
     @property
+    def article(self):
+        return self._article
+
+    @property
     def prise(self):
         return self._prise
+
+
 
 
 
