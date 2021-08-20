@@ -9,16 +9,16 @@ class Receipt:
         self.client = client
         self.rows = []
 
-
-
     def add_row(self, r: Row):
         self.rows.append(r)
-
 
     def check_article_in_receipt(self, article):
 
         current_row = [item for item in self.rows if item.product.article == article]
-        return current_row
+        if len(current_row) > 0:
+            return True
+        else:
+            return False
 
     def increase_quantity(self, article, quantity):
         current_row = [item for item in self.rows if item.current_product.article == article][0]
