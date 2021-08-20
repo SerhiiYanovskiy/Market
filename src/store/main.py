@@ -44,9 +44,18 @@ def start_store():
                 except IndexError:
                     error_menu()
                     pass
+                my_store.add_receipt(current_receipt)
+        if choice == 4:
+            article = input('write artical')
+            titele = input('wrire titele')
+            price = input('write prise')
+            import csv
+            with open("prod.csv", "a", newline='') as w_file:
+                file_writer = csv.writer(w_file, delimiter=",", lineterminator="\r")
+                file_writer.writerow([article, titele, price])
 
 
-            my_store.add_receipt(current_receipt)
+
 
 if __name__ == '__main__':
     start_store()

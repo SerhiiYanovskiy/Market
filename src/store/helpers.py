@@ -6,15 +6,14 @@ def find_product_by_article(article):
     return corent_product
 
 
-
 def error_menu():
     print("Article not found")
-
 
 
 def receipt_menu():
     print('0. Exit')
     print('1. Write article and quantity')
+
 
 def decor(func):
     def menu():
@@ -30,18 +29,9 @@ def print_menu():
     print('1. List of STORE')
     print('2. Show products no more expensive than N')
     print('3. Yore receipt')
+    print('4. Add product')
 
 
 def print_product_list(S):
     for idx, item in enumerate(S):
         print(f'{idx}) {item}')
-
-
-
-
-
-
-
-
-
-
