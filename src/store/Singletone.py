@@ -1,4 +1,5 @@
 from Receipt import Receipt
+from const import STORE
 
 
 class SingletonMeta(type):
@@ -10,9 +11,17 @@ class SingletonMeta(type):
         return cls._instances[cls]
 
 
+
 class Store(metaclass=SingletonMeta):
     def __init__(self):
         self.receipts = []
+
+
+
+
+
+
+
 
 
     def add_receipt(self, r: Receipt):

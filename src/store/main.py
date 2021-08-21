@@ -1,5 +1,5 @@
 from const import STORE
-from helpers import print_menu, receipt_menu, find_product_by_article, print_product_list
+from helpers import print_menu, receipt_menu, find_product_by_article, print_product_list,error_menu , print_check
 from Singletone import Store
 from Receipt import Receipt
 import datetime
@@ -53,6 +53,9 @@ def start_store():
             with open("prod.csv", "a", newline='') as w_file:
                 file_writer = csv.writer(w_file, delimiter=",", lineterminator="\r")
                 file_writer.writerow([article, titele, price])
+        if choice == 5:
+            for i in my_store.receipts:
+                print_check(i)
 
 
 

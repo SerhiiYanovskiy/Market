@@ -9,6 +9,11 @@ class Receipt:
         self.client = client
         self.rows = []
 
+
+    def __str__(self):
+            return f'CHECK\n date  {self.datetime}\n client  {self.client}\n product {self.rows}'
+
+
     def add_row(self, r: Row):
         self.rows.append(r)
 
