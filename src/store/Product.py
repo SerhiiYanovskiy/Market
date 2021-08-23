@@ -5,7 +5,7 @@ class Product:
         self._prise = price
 
     def __str__(self):
-        return f'article = {self._article} title = {self._title} prise = {self._prise}'
+        return f' {self._article}  {self._title}  {self._prise}'
 
     @property
     def article(self):

@@ -38,8 +38,8 @@ def start_store():
                             current_receipt.increase_quantity(find_product_by_article(article), quantity)
 
                         else:
-                            current_product = find_product_by_article(article)
-                            current_row = Row(current_product, quantity)
+                            product = find_product_by_article(article)
+                            current_row = Row(product, quantity)
                             current_receipt.add_row(current_row)
                 except IndexError:
                     error_menu()
